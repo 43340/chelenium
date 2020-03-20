@@ -1,0 +1,22 @@
+{
+    "first_name": "User",
+    "last_name": "One",
+    "email": "test_email@website.com",
+    "password": "password",
+    "dob_day": "14",
+    "dob_month": "February",
+    "dob_year": "1995",
+    "first_name_02": "Dummy",
+    "last_name_02": "One",
+    "company": "CheQ Systems",
+    "address1": "Makati City",
+    "address2": "",
+    "city": "State City",
+    "state": "Idaho",
+    "postcode": "12345",
+    "country": "United States",
+    "other": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "phone": "1234567890",
+    "mobile": "0987654321",
+    "alias": "Address"
+}
