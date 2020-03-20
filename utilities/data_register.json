@@ -1,7 +1,8 @@
 {
+  "valid_acc_creation": {
     "first_name": "User",
     "last_name": "One",
-    "email": "test_email@website.com",
+    "email": "test_email1234@website.com",
     "password": "password",
     "dob_day": "14",
     "dob_month": "February",
@@ -19,4 +20,5 @@
     "phone": "1234567890",
     "mobile": "0987654321",
     "alias": "Address"
+  }
 }

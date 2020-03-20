@@ -1,5 +1,31 @@
 {
-  "email": "demo2@user.com",
-  "password": "password",
-  "email_create": "testemailforskycable@sky.com"
+  "login_correct_credentials": {
+    "email": "demo2@user.com",
+    "password": "password"
+  },
+  "login_wrong_credentials": {
+    "email": "demo2@user.com",
+    "password": "passwo"
+  },
+  "login_no_email": {
+    "email": "",
+    "password": "password"
+  },
+  "login_no_password": {
+    "email": "demo2@user.com",
+    "password": ""
+  },
+  "login_no_email_and_password": {
+    "email": "",
+    "password": ""
+  },
+  "reg_valid_email": {
+    "email": "testemailforskycable@sky.com"
+  },
+  "reg_invalid_email": {
+    "email": "testemailforskycable"
+  },
+  "reg_registered_email": {
+    "email": "demo2@user.com"
+  }
 }
