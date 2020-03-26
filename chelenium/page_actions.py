@@ -12,6 +12,11 @@ def send_text(element, text):
     element.send_keys(text)
 
 
+def update_text(element, text):
+    print(f"DEBUG | {element._name}.update_text({text})")
+    element.clear()
+    element.send_keys(text)
+
 def hover(driver, element):
     print(f"DEBUG | {element._name}.hover()")
     ActionChains(driver).move_to_element(element).perform()
