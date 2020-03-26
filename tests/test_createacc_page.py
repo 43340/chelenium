@@ -7,9 +7,11 @@ from pages.profile_page import ProfilePage
 import pytest
 from chelenium.asserts import *
 import time
+import allure
 
 class TestCreateAccPage:
 
+    @allure.title("Valid account creation test")
     def test_valid_acc_creation(self, driver):
         data = provider.test_data_provider("register", "valid_acc_creation")
         homepage = HomePage(driver)

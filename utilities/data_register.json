@@ -2,7 +2,7 @@
   "valid_acc_creation": {
     "first_name": "User",
     "last_name": "One",
-    "email": "test_email1234@website.com",
+    "email": "test_email12345@website.com",
     "password": "password",
     "dob_day": "14",
     "dob_month": "February",
