@@ -27,12 +27,11 @@ class CreateAccPage(PageElement):
         'btn_register': (By.XPATH, "//button[@id='submitAccount']")
     }
 
-    @property
     def is_page_loaded(self):
         time.sleep(5)
         return True if (self.page_header.text == "Create an account" and
-                        self.first_name_01.is_displayed() and
-                        self.last_name_01.is_displayed()) else False
+                        self.first_name_01.is_displayed and
+                        self.last_name_01.is_displayed) else False
 
     def fill_up_form(self, data):
         actions.send_text(self.first_name_01, (data.get("first_name")))

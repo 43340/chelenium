@@ -5,7 +5,6 @@ from pages.auth_page import AuthPage
 from pages.createacc_page import CreateAccPage
 from pages.profile_page import ProfilePage
 import pytest
-from chelenium.asserts import *
 import time
 
 class TestCreateAccPage:
@@ -17,14 +16,14 @@ class TestCreateAccPage:
         createaccpage = CreateAccPage(driver)
         profilepage = ProfilePage(driver)
 
-        assert_true(homepage.is_page_loaded)
+        assert homepage.is_page_loaded
         homepage.sign_in_button.click()
 
-        assert_true(authpage.is_page_loaded)
+        assert authpage.is_page_loaded
         authpage.register(data)
 
-        assert_true(createaccpage.is_page_loaded)
+        assert createaccpage.is_page_loaded
         createaccpage.fill_up_form(data)
 
-        assert_true(profilepage.is_page_loaded())
+        assert profilepage.is_page_loaded()
         time.sleep(3)
