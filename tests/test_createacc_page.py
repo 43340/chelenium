@@ -4,25 +4,26 @@ from pages.home_page import HomePage
 from pages.auth_page import AuthPage
 from pages.createacc_page import CreateAccPage
 from pages.profile_page import ProfilePage
+import pytest
 import time
 
-class CreateAccPageTest(BaseTest):
+class TestCreateAccPage:
 
-    def test_valid_acc_creation(self):
-        self.data = provider.test_data_provider("register", "valid_acc_creation")
-        homepage = HomePage(self.driver)
-        authpage = AuthPage(self.driver)
-        createaccpage = CreateAccPage(self.driver)
-        profilepage = ProfilePage(self.driver)
+    def test_valid_acc_creation(self, driver):
+        data = provider.test_data_provider("register", "valid_acc_creation")
+        homepage = HomePage(driver)
+        authpage = AuthPage(driver)
+        createaccpage = CreateAccPage(driver)
+        profilepage = ProfilePage(driver)
 
-        self.assertTrue(homepage.is_page_loaded)
+        assert homepage.is_page_loaded
         homepage.sign_in_button.click()
 
-        self.assertTrue(authpage.is_page_loaded)
-        authpage.register(self.data)
+        assert authpage.is_page_loaded
+        authpage.register(data)
 
-        self.assertTrue(createaccpage.is_page_loaded)
-        createaccpage.fill_up_form(self.data)
+        assert createaccpage.is_page_loaded
+        createaccpage.fill_up_form(data)
 
-        self.assertTrue(profilepage.is_page_loaded())
+        assert profilepage.is_page_loaded()
         time.sleep(3)
